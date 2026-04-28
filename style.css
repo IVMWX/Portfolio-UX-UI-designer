@@ -1,0 +1,700 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #161616;
+    color: #F2F2F2;
+}
+
+.page {
+    display: flex;
+    gap: 24px;
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sidebar {
+    width: 401px;
+    background-color: #1A1A1A;
+    border: 1px solid #303030;
+    border-radius: 24px;
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.sidebar-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    position: sticky;
+    top: 24px;
+    height: fit-content;
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.sidebar-button-mobile {
+    display: none;
+}
+
+.main {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: #1A1A1A;
+    border: 1px solid #333333;
+    border-radius: 24px;
+    padding: 24px;
+    overflow: hidden;
+}
+
+h2 {
+    font-size: 14px;
+    color: #8A8A8A;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+
+.section-title {
+    font-size: 14px;
+    color: #8A8A8A;
+    margin-bottom: 8px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+.profile-name {
+    font-size: 24px;
+}
+
+.profile-role {
+    font-size: 14px;
+    color: #8A8A8A;
+}
+
+.tags {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.tags-row {
+    display: flex;
+    gap: 4px;
+}
+
+.tag {
+    border: 1px solid #333333;
+  padding: 4px 8px;
+  font-size: 14px;
+  border-radius: 8px;
+
+  white-space: nowrap;
+}
+
+.sidebar-button {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    height: 40px;
+    border-radius: 24px;
+
+    background-color: #1A1A1A;
+    border: 1px solid #303030;
+
+    color: #F2F2F2;
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+.icon-btn {
+    width: 24px;
+    height: 24px;
+
+    display: block;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background-color: #262626;
+    color: #FFFFFF;
+}
+
+.btn:active {
+    background-color: #303030;
+    color: #DADADA;
+    transform: scale(0.98);
+}
+
+.projects {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.projects-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 16px;
+    
+}
+
+.projects-list {
+    display: flex;
+    gap: 16px;
+    transition: transform 0.4s ease;
+    will-change: transform;
+}
+
+.project-card {
+    width: 394px;
+    padding: 16px;
+    position: relative;
+
+    background-color: #212121;
+    border: 1px solid #333333;
+    border-radius: 24px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    flex-shrink: 0;
+
+
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.project-card:active:not(.no-click-anim) {
+    transform: scale(0.98);
+}
+
+.project-card_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-card_title {
+    font-size: 24px;
+}
+
+.project-card_subtitle {
+    font-size: 14px;
+    color: #8A8A8A;
+}
+
+.project-card_btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+    gap: 8px;
+    padding:0 12px;
+
+    background-color: #1A1A1A;
+    border: 1px solid #303030;
+    border-radius: 8px;
+
+    font-size: 14px;
+    color: #F2F2F2;
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+.project-card_btn:hover {
+    background-color: #262626;
+    color: #FFFFFF;
+}
+
+.project-card_btn:active {
+    background-color: #303030;
+    color: #DADADA;
+    transform: scale(0.98);
+}
+
+.project-card_image {
+    width: 100%;
+    height: 270px;
+
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.project-card_description {
+    font-size: 14px;
+    color: #8A8A8A;
+}
+
+.jobs-card, .exp-card{
+    width:  100%;
+    padding: 16px;
+
+    background-color: #212121;
+    border: 1px solid #333333;
+    border-radius: 24px;
+
+    gap: 24px;
+    
+    display: flex;
+}
+
+.job-img, .exp-img{
+    width: 75px;
+    height: 75px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.job-info, .exp-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.job-name, .exp-name{
+    font-size: 24px;
+}
+
+.job-role, .exp-role{
+    font-size: 14px;
+    color: #8A8A8A;
+}
+
+.job-meta, .exp-meta{
+    align-items: left;
+    display: flex;
+    gap: 8px;
+    font-size: 14px;
+    color: #8A8A8A;
+}
+
+.job-meta-item, 
+.exp-meta-item {
+    display: flex;
+    gap: 4px;
+}
+
+.job-description, .exp-description{
+    font-size: 14px;
+    color: #F2F2F2;
+}
+
+.achievements-slider {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 16px;
+}
+
+.achievements-list {
+    display: flex;
+    gap: 16px;
+    transition: transform 0.4s ease;
+    will-change: transform;
+}
+
+.achievements-card {
+    width: 394px;
+    height: 543px;
+
+    background-color: #212121;
+    border: 1px solid #333333;
+    border-radius: 16px;
+
+    padding: 8px;
+
+    flex-shrink: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;  
+}
+
+.achievements-card:active {
+        transform: scale(0.98);
+}
+
+.achievements-card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;;
+    position: relative;
+    top: 2px;
+}
+
+.icon-be {
+    width: 20px;
+    height: 20px;;
+    position: relative;
+}
+
+.meta-icon{
+    width: 16px;
+    height: 16px;
+}
+
+.contact-item{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.mobile-header {
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    z-index: 5;
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+
+@media (max-width: 768px) {
+    .page {
+        max-width: 100%;
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .sidebar {
+        width: 280px;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .tags-row{
+        flex-wrap: wrap;
+    }
+
+    .tags{
+        white-space: normal;
+    }
+    
+    .projects-slider {
+        overflow: hidden;
+    }
+
+    .projects-list {
+        display: flex;
+        will-change: transform;
+    }
+
+    .project-card {
+        width: 80%;
+        height: auto;
+        flex-shrink: 0;
+    }
+
+    .project-card_title {
+        font-size: 24px;
+    }
+
+    .project-card_subtitle{
+        font-size: 14px;
+    }
+
+    .project-card_image{
+        width: 100%;
+        height: 50%;
+    }
+
+    .project-card_btn{
+        width: 42px;
+        height: 42px;
+    }  
+
+
+    .achievements-slider {
+        overflow: hidden;
+    }
+
+    .achievements-list {
+        display: flex;
+        will-change: transform;
+    }
+
+    .achievements-card {
+        width: 80%;
+        height: auto;
+        flex-shrink: 0;
+    }
+
+    .job-meta, .exp-meta{
+        flex-direction: column;
+        gap: 4px;
+    }
+}
+
+@media (max-width: 425px) {
+    .page {
+        position: relative;
+        flex-direction: column;
+        padding: 12px;
+        gap: 12px;
+
+        background: #161616;
+    }
+
+    .profile {
+        display: none;
+    }
+
+    .mobile-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-bottom: 12px;
+    }
+
+    .mobile-profile {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .mobile-avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+
+        object-fit: cover;
+    }
+
+    .mobile-name {
+        font-size: 24px;
+    }
+
+    .mobile-role {
+        font-size: 14px;
+        color: #8A8A8A;
+    }
+
+    .mobile-toggle {
+        width: 40px;
+        height: 40px;
+
+        border-radius: 12px;
+        border: 1px solid #303030;
+        background: #1A1A1A;
+
+        position: relative;
+    }
+
+    .mobile-toggle span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+
+        width: 18px;
+        height: 2px;
+        background: white;
+
+        transform-origin: center;
+        transition: 0.3s;
+    }
+
+    .mobile-toggle span:nth-child(1) {
+        transform: translate(-50%, -6px);
+    }
+
+    .mobile-toggle span:nth-child(2) {
+        transform: translate(-50%, 6px);
+    }
+
+    .sidebar-wrapper.active .mobile-toggle span:nth-child(1) {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .sidebar-wrapper.active .mobile-toggle span:nth-child(2) {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    .sidebar-wrapper {
+        position: sticky;
+        top: 0px;
+
+        z-index: 100;
+
+        background: #161616;
+        border-radius: 0 0 16px 16px;
+
+        padding-top: 12px;
+        margin-top: -12px;
+    }
+
+    .sidebar-wrapper::before{
+        content: "";
+        inset: 0;
+
+        background: #161616;
+
+        z-index: -1;
+    }
+
+    .overlay{
+        display: none;
+    }
+
+    .sidebar {
+        width: 100%;
+        max-height: 100px;
+        overflow: hidden;
+
+        background-color: #1A1A1A;
+        background: #1A1A1A;
+        border: 1px solid #303030;
+        border-radius: 16px;
+
+        padding: 10px;
+
+        transition: max-height 0.35s ease;
+
+        display: flex;
+        flex-direction: column;
+
+        position: relative;
+        z-index: 2;
+    }
+
+    .sidebar-content{
+        gap: 16px;
+    }
+
+    .sidebar-wrapper.active .sidebar {
+        max-height: 1600px;
+    }
+
+    .sidebar-button {
+        order: 999;
+        margin-top: 16px;
+    }
+
+    .main {
+        margin-top: 16px;
+        padding: 16px;
+    }
+
+    .projects-slider{
+        overflow: visible;
+    }
+
+    .projects-list{
+        flex-direction: column;
+        transform: none !important;
+        will-change: transform;
+    }
+
+    .project-card{
+        width: 100%;
+    }
+
+    .project-card_btn{
+        width: 42px;
+        height: 42px;
+    }
+
+    .achievements-card {
+        width: 80%;
+        height: auto;
+    }
+
+
+    .sidebar-wrapper > .sidebar-button {
+        display: none;
+    }
+
+
+    .sidebar-button-mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 16px;
+    }
+
+    .achievements-slider {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .achievements-list {
+        display: flex;
+        gap: 12px;
+        will-change: transform;
+    }
+
+    .achievements-card {
+        min-width: 80%;
+        flex-shrink: 0;
+    }
+
+    .job-meta, .exp-meta{
+        flex-direction: column;
+        gap: 4px;
+    }
+
+}
