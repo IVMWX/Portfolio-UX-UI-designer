@@ -75,6 +75,10 @@ body {
     width: 100%;
 }
 
+.description {
+    width: 400px;
+}
+
 .icon_new {
     width: 32px;
     height: 32px;
@@ -529,7 +533,7 @@ h2 {
     }
 
     .description {
-        width: 40%;
+        width: 100%;
     }
 
    .contact-item {
@@ -879,6 +883,10 @@ h2 {
         border-radius: 16px;
     }
 
+    .description {
+        width: 60%;
+    }
+
     .projects-slider{
         overflow: visible;
     }
@@ -957,7 +965,7 @@ h2 {
     }
 
     .description {
-        width: 100%;
+        width: 200px;
     }
 
     .jobs-card {
