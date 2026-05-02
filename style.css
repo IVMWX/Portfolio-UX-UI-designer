@@ -49,8 +49,40 @@ body {
     display: none;
 }
 
+.featured {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.featured:active {
+    transform: scale(0.98);
+}
+
+.new {
+    width: 100%;
+    display: flex;
+    gap: 16px;
+    background-color: #1A1A1A;
+    border: 1px solid #333333;
+    border-radius: 24px;
+    padding: 24px;
+    overflow: hidden;
+}
+
+.about {
+    width: 100%;
+}
+
+.icon_new {
+    width: 32px;
+    height: 32px;
+    color: #F2F2F2;
+}
+
 .main {
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -59,6 +91,13 @@ body {
     border-radius: 24px;
     padding: 24px;
     overflow: hidden;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 60%;
 }
 
 h2 {
@@ -84,6 +123,7 @@ h2 {
 .profile-info {
   display: flex;
   flex-direction: column;
+  gap: 4px;
 }
 
 .profile-avatar {
@@ -94,6 +134,10 @@ h2 {
     object-fit: cover;
 }
 
+.name_role {
+    gap: 2px;
+}
+
 .profile-name {
     font-size: 24px;
 }
@@ -101,6 +145,17 @@ h2 {
 .profile-role {
     font-size: 14px;
     color: #8A8A8A;
+}
+
+.statys {
+    background-color: #38AB15;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #f2f2f2;
+    font-size: 14px;
+    border-radius: 24px;
+    padding: 2px 4px 2px 4px;
 }
 
 .tags {
@@ -116,11 +171,11 @@ h2 {
 
 .tag {
     border: 1px solid #333333;
-  padding: 4px 8px;
-  font-size: 14px;
-  border-radius: 8px;
+    padding: 4px 8px;
+    font-size: 14px;
+    border-radius: 8px;
 
-  white-space: nowrap;
+    white-space: nowrap;
 }
 
 .sidebar-button {
@@ -201,7 +256,6 @@ h2 {
     gap: 8px;
 
     flex-shrink: 0;
-
 
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -409,21 +463,37 @@ h2 {
     pointer-events: all;
 }
 
-
-
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .page {
         max-width: 100%;
         padding: 16px;
         gap: 16px;
     }
 
+    .content {
+        width: 60%;
+    }
+
+    .sidebar-wrapper {
+        width: 400px;
+    }
+
     .sidebar {
-        width: 280px;
+        width: 100%;
+        padding: 16px;
     }
 
     .main {
         width: 100%;
+    }
+
+    .profile-avatar {
+        width: 70px;
+        height: 70px;
+    }
+
+    .profile {
+        gap: 12px;
     }
 
     .tags-row{
@@ -433,7 +503,39 @@ h2 {
     .tags{
         white-space: normal;
     }
-    
+
+    .tag {
+        font-size: 14px;
+    }
+
+    .profile-name {
+        font-size: 24px
+    }
+
+    .profile-role {
+        font-size: 14px;
+    }
+
+    .statys {
+        font-size: 12px;
+    }
+
+   .section-title {
+        font-size: 12px;
+    }
+
+   .about-text {
+        font-size: 14px;
+    }
+
+    .description {
+        width: 40%;
+    }
+
+   .contact-item {
+        font-size: 14px;
+    }
+
     .projects-slider {
         overflow: hidden;
     }
@@ -489,7 +591,131 @@ h2 {
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 768px) {
+    .page {
+        max-width: 100%;
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .content {
+        width: 60%;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 16px;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .profile-avatar {
+        width: 70px;
+        height: 70px;
+    }
+
+    .profile {
+        gap: 12px;
+    }
+
+    .tags-row{
+        flex-wrap: wrap;
+    }
+
+    .tags{
+        white-space: normal;
+    }
+
+    .tag {
+        font-size: 14px;
+    }
+
+    .profile-name {
+        font-size: 24px
+    }
+
+    .profile-role {
+        font-size: 14px;
+    }
+
+    .statys {
+        font-size: 12px;
+    }
+
+   .section-title {
+        font-size: 12px;
+    }
+
+   .about-text {
+        font-size: 14px;
+    }
+
+    .description {
+        width: 60%;
+    }
+
+   .contact-item {
+        font-size: 14px;
+    }
+
+    .projects-slider {
+        overflow: hidden;
+    }
+
+    .projects-list {
+        display: flex;
+        will-change: transform;
+    }
+
+    .project-card {
+        width: 80%;
+        height: auto;
+        flex-shrink: 0;
+    }
+
+    .project-card_title {
+        font-size: 24px;
+    }
+
+    .project-card_subtitle{
+        font-size: 14px;
+    }
+
+    .project-card_image{
+        width: 100%;
+        height: 50%;
+    }
+
+    .project-card_btn{
+        width: 42px;
+        height: 42px;
+    }  
+
+
+    .achievements-slider {
+        overflow: hidden;
+    }
+
+    .achievements-list {
+        display: flex;
+        will-change: transform;
+    }
+
+    .achievements-card {
+        width: 80%;
+        height: auto;
+        flex-shrink: 0;
+    }
+
+    .job-meta, .exp-meta{
+        flex-direction: column;
+        gap: 4px;
+    }
+}
+
+@media (max-width: 430px) {
     .page {
         position: relative;
         flex-direction: column;
@@ -501,6 +727,10 @@ h2 {
 
     .profile {
         display: none;
+    }
+
+    .statys {
+        font-size: 14px;
     }
 
     .mobile-header {
@@ -576,6 +806,7 @@ h2 {
 
     .sidebar-wrapper {
         position: sticky;
+        width: 100%;
         top: 0px;
 
         z-index: 100;
@@ -634,9 +865,18 @@ h2 {
         margin-top: 16px;
     }
 
+    .content {
+        width: 100%;
+        gap: 16px
+    }
+
     .main {
-        margin-top: 16px;
         padding: 16px;
+        border-radius: 16px;
+    }
+
+    .new {
+        border-radius: 16px;
     }
 
     .projects-slider{
@@ -663,11 +903,9 @@ h2 {
         height: auto;
     }
 
-
     .sidebar-wrapper > .sidebar-button {
         display: none;
     }
-
 
     .sidebar-button-mobile {
         display: flex;
@@ -695,6 +933,103 @@ h2 {
     .job-meta, .exp-meta{
         flex-direction: column;
         gap: 4px;
+    }   
+}
+
+@media (max-width: 320px) {
+
+    .sidebar-wrapper {
+        height: fit-content;
     }
 
-}
+    .sidebar {
+        gap: 16px;
+    }
+
+    .mobile-avatar {
+        width: 64px;
+        height: 64px;
+    }
+
+    .statys {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .description {
+        width: 100%;
+    }
+
+    .jobs-card {
+        position: relative;
+        padding-bottom: 80px;
+        height: 260px;
+        gap: 8px;
+    }
+
+    .job-img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .job-name {
+        font-size: 16px;
+    }
+
+    .job-meta-item {
+        width: 100px;
+        gap: 8px;
+    }
+
+    .meta-icon {
+        display: none;
+    }
+
+    .job-description {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    background: inherit;
+    padding: 1rem;
+    box-sizing: border-box;
+    }
+
+    .exp-card {
+        position: relative;
+        padding-bottom: 80px;
+        height: 310px;
+        gap: 8px;
+    }
+
+    .exp-img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .exp-name {
+        font-size: 16px;
+    }
+
+    .exp-meta-item {
+        width: 100px;
+        gap: 8px;
+    }
+
+    .exp-icon {
+        display: none;
+    }
+    
+    .exp-description {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    background: inherit;
+    padding: 1rem;
+    box-sizing: border-box;
+    }
+
+} 
